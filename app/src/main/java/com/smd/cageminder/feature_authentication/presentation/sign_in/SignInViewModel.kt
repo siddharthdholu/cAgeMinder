@@ -20,7 +20,7 @@ class SignInViewModel @Inject constructor(
     override fun defaultState() = SignInState()
     override fun onEvent(event: SignInEvent) {
         when (event) {
-            SignInEvent.ForgotPassword -> {
+            is SignInEvent.ForgotPassword -> {
                 mLog.d("ForgotPassword Clicked")
             }
 
@@ -39,7 +39,7 @@ class SignInViewModel @Inject constructor(
                         username = event.username
                     )
                 }
-                Log.d("ViewModel", "Username: ${event.username}")
+                mLog.d("Username: ${event.username}")
             }
 
             is SignInEvent.SignIn -> {
@@ -48,16 +48,16 @@ class SignInViewModel @Inject constructor(
 
             }
 
-            SignInEvent.SignInWithFacebook -> {
-                Log.d("ViewModel", "Facebook Clicked")
+            is SignInEvent.SignInWithFacebook -> {
+                mLog.d("Facebook Clicked")
             }
 
-            SignInEvent.SignInWithGoogle -> {
-                Log.d("ViewModel", "Google Clicked")
+            is SignInEvent.SignInWithGoogle -> {
+                mLog.d("Google Clicked")
             }
 
-            SignInEvent.SignUp -> {
-                Log.d("ViewModel", "SignUp Clicked")
+            is SignInEvent.SignUp -> {
+                mLog.d("SignUp Clicked")
             }
         }
     }

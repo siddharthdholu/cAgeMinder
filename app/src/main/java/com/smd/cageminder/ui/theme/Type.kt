@@ -50,7 +50,7 @@ val interBold = FontFamily(
         googleFont = fontInter,
         fontProvider = provider,
         weight = FontWeight.Bold,
-        style = FontStyle.Italic
+        //style = FontStyle.Italic
     )
 )
 
@@ -59,7 +59,7 @@ val interNormal = FontFamily(
         googleFont = fontInter,
         fontProvider = provider,
         weight = FontWeight.Normal,
-        style = FontStyle.Italic
+        //style = FontStyle.Italic
     )
 )
 
@@ -68,6 +68,6 @@ val interLight = FontFamily(
         googleFont = fontInter,
         fontProvider = provider,
         weight = FontWeight.Light,
-        style = FontStyle.Italic
+        //style = FontStyle.Italic
     )
 )

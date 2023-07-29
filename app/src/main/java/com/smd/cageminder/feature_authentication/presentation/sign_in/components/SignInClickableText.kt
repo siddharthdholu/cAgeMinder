@@ -5,9 +5,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.smd.cageminder.ui.theme.Gray01
 import com.smd.cageminder.ui.theme.interNormal
 
 @Composable
@@ -15,7 +16,9 @@ fun signInClickableText(
     text: String,
     onClick: (Int) -> Unit,
     color: Color,
-    fontStyle: FontStyle = FontStyle.Normal
+    fontStyle: FontStyle = FontStyle.Normal,
+    fontWeight: FontWeight = FontWeight.Normal,
+    fontFamily: FontFamily = interNormal
 
 ) {
     ClickableText(
@@ -24,8 +27,9 @@ fun signInClickableText(
         style = TextStyle(
             fontSize = 14.sp,
             color = color,
-            fontFamily = interNormal,
-            fontStyle = fontStyle
+            fontFamily = fontFamily,
+            fontStyle = fontStyle,
+            fontWeight = fontWeight
         )
     )
 }
